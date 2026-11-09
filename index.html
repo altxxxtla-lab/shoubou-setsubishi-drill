@@ -140,11 +140,16 @@ header{background:var(--band);color:#F0F3F1;padding:20px 0 0;margin-bottom:22px}
   .qtext{font-size:16px} .score b{font-size:44px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none !important}}
+
+.lab-home{display:flex;width:max-content;max-width:100%;align-items:center;gap:.45em;margin:0 0 14px;font-size:12.5px;line-height:1.6;letter-spacing:.02em;color:#9DB0BC;text-decoration:none;transition:color .12s}
+.lab-home:hover{color:#FFFFFF;text-decoration:underline;text-underline-offset:3px}
+.lab-home:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
 <header>
   <div class="hd">
+    <a class="lab-home" href="https://altxxxtla-lab.github.io/">← 学習アプリ一覧</a>
     <h1>消防設備士　演習</h1>
     <p>試験範囲に沿った書き下ろし問題集　／　解答は都度自分でテキスト照合を</p>
     <div class="tabs" role="tablist" id="tabs"></div>
