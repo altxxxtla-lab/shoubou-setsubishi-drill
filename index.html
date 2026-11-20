@@ -2250,13 +2250,13 @@ ko1: [
 
 /* ============ 状態管理 ============ */
 const KEY = 'shoubou-drill-v1';
-const COURSES = ['ko4','otsu6','ko1'];
+const COURSES = ['otsu6','ko4','ko1'];   // 受験する順（乙6 → 甲4 → 甲1）
 let S = load();
-let cur = S.lastCourse || 'ko4';
+let cur = S.lastCourse || 'otsu6';
 let session = null;
 
 function blank(){
-  const o = {lastCourse:'ko4', log:{}, flags:{}, days:[], read:{}};
+  const o = {lastCourse:'otsu6', log:{}, flags:{}, days:[], read:{}};
   return o;
 }
 function load(){
