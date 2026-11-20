@@ -110,6 +110,15 @@ header{background:var(--band);color:#F0F3F1;padding:20px 0 0;margin-bottom:22px}
 .fg-label text{font-size:13px;fill:var(--ink)}
 .fg-label text.sm{font-size:11px;fill:var(--muted)}
 .fg-label text.ctr{text-anchor:middle}
+.fg-label text.shu{fill:var(--shu);font-weight:700}
+.fg-label text.ok{fill:var(--ok);font-weight:700}
+.fg-co2-green{fill:#CBE0D3;stroke:none}
+.fg-co2-red{fill:#F3DADB;stroke:none}
+.fg-fill-plan{fill:#FAFBFA;stroke:none}
+.fg-person{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
+.fg-ext{fill:#F0D2D4;stroke:var(--ink);stroke-width:1.6}
+.fg-dashed{fill:none;stroke:var(--shu);stroke-width:1.8;stroke-dasharray:6 5}
+.fg-route{fill:none;stroke:var(--ok);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
 
 /* ---- quiz ---- */
 .qmeta{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px;font-size:12px;color:var(--muted)}
@@ -739,6 +748,114 @@ bourdon: `<svg viewBox="0 0 440 236" role="img" aria-label="ブルドン管と�
 <text x="330" y="202" class="ctr sm">0.7〜0.98MPa</text>
 <text x="330" y="220" class="ctr sm">材質記号も文字盤に表示</text>
 </g>
+</svg>`,
+
+/* --- 二酸化炭素消火器の断面 --- */
+co2: `<svg viewBox="0 0 440 340" role="img" aria-label="二酸化炭素消火器の断面図">
+<defs><marker id="ar5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+<path d="M0,0 L7,3.5 L0,7 z" fill="var(--rule-dark)"/></marker></defs>
+<g class="fg-body">
+<path d="M66 124 q0-12 12-12 h52 q12 0 12 12 v160 q0 12-12 12 h-52 q-12 0-12-12 z"/>
+<rect x="92" y="94" width="24" height="18"/>
+<rect x="80" y="68" width="48" height="26" rx="3"/>
+</g>
+<g class="fg-co2-green"><path d="M70 128 q0-12 10-12 h48 q10 0 10 12 v78 h-68 z"/></g>
+<g class="fg-co2-red"><path d="M70 206 h68 v46 h-68 z"/></g>
+<g class="fg-line">
+<path d="M66 124 q0-12 12-12 h52 q12 0 12 12 v160 q0 12-12 12 h-52 q-12 0-12-12 z"/>
+<rect x="92" y="94" width="24" height="18"/>
+<rect x="80" y="68" width="48" height="26" rx="3"/>
+<path d="M70 206 h68 M70 252 h68"/>
+<rect x="99" y="94" width="10" height="172"/>
+<path d="M104 70 L150 56"/><path d="M104 86 L146 94"/>
+<path d="M128 80 q34 14 38 50 q3 22 -4 38"/>
+<path d="M164 184 L206 160 L206 240 L164 216 Z"/>
+</g>
+<g class="fg-accent">
+<rect x="152" y="184" width="14" height="32" rx="5"/>
+<circle cx="90" cy="62" r="6"/>
+<circle cx="120" cy="60" r="5"/><path d="M120 55 v-8"/>
+</g>
+<g class="fg-label">
+<text x="218" y="52">安全弁</text><text x="218" y="68" class="sm">圧力上昇時にガスを放出</text>
+<text x="218" y="100">容器弁とレバー</text><text x="218" y="116" class="sm">高圧ガス保安法の適用を受ける開閉バルブ</text>
+<text x="218" y="148">指示圧力計はない</text><text x="218" y="164" class="sm">充てん量は総質量で確認</text>
+<text x="218" y="196">ホーン</text><text x="218" y="212" class="sm">ノズルに相当する大きな円錐</text>
+<text x="218" y="244">ホーン握り</text><text x="218" y="260" class="sm">気化で低温になるため凍傷防止</text>
+<text x="218" y="292">サイホン管</text><text x="218" y="308" class="sm">本体内は高圧の液化炭酸ガス</text>
+</g>
+<g class="fg-lead">
+<path d="M212 48 L100 58" marker-end="url(#ar5)"/>
+<path d="M212 96 L136 82" marker-end="url(#ar5)"/>
+<path d="M212 144 L146 126" marker-end="url(#ar5)"/>
+<path d="M212 192 L200 202" marker-end="url(#ar5)"/>
+<path d="M212 240 L170 212" marker-end="url(#ar5)"/>
+<path d="M212 288 L116 262" marker-end="url(#ar5)"/>
+</g>
+</svg>`,
+
+/* --- 機械泡の発泡ノズル --- */
+happou: `<svg viewBox="0 0 440 200" role="img" aria-label="機械泡消火器の発泡ノズルの仕組み">
+<defs><marker id="ar6" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+<path d="M0,0 L7,3.5 L0,7 z" fill="var(--shu)"/></marker></defs>
+<g class="fg-body"><path d="M40 88 h74 l18 -16 h96 l0 56 h-96 l-18 -16 h-74 z"/></g>
+<g class="fg-line">
+<path d="M40 88 h74 l18 -16 h96"/>
+<path d="M40 112 h74 l18 16 h96"/>
+<path d="M132 72 v56"/>
+<path d="M114 88 v24"/>
+</g>
+<g class="fg-mark"><path d="M120 72 v-12 M126 72 v-12 M138 72 v-12 M144 72 v-12"/></g>
+<g class="fg-accent">
+<path d="M123 36 v16" marker-end="url(#ar6)"/>
+<path d="M141 36 v16" marker-end="url(#ar6)"/>
+<path d="M52 100 h44" marker-end="url(#ar6)"/>
+</g>
+<g class="fg-line">
+<circle cx="250" cy="82" r="7"/><circle cx="266" cy="98" r="10"/>
+<circle cx="248" cy="114" r="7"/><circle cx="274" cy="74" r="5"/><circle cx="276" cy="120" r="6"/>
+</g>
+<g class="fg-label">
+<text x="132" y="24" class="ctr">空気</text>
+<text x="300" y="94">泡になって放射</text>
+<text x="300" y="118" class="sm">窒息作用＋冷却作用</text>
+<text x="24" y="156" class="sm">消火剤（水成膜・界面活性剤の水溶液）</text>
+<text x="24" y="182" class="sm">発泡ノズルの根元にある空気吸入孔から空気を取り込む</text>
+</g>
+<g class="fg-lead"><path d="M78 144 v-28" marker-end="url(#ar6)"/></g>
+</svg>`,
+
+/* --- 歩行距離と水平距離 --- */
+hokou: `<svg viewBox="0 0 440 268" role="img" aria-label="歩行距離と水平距離の違い">
+<defs>
+<marker id="ar7" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+<path d="M0,0 L7,3.5 L0,7 z" fill="var(--shu)"/></marker>
+<marker id="ar8" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+<path d="M0,0 L7,3.5 L0,7 z" fill="var(--ok)"/></marker>
+</defs>
+<g class="fg-fill-plan"><rect x="24" y="40" width="392" height="150"/></g>
+<g class="fg-line">
+<rect x="24" y="40" width="392" height="150"/>
+<path d="M180 96 v94"/>
+<path d="M300 40 v116"/>
+</g>
+<g class="fg-person">
+<circle cx="56" cy="120" r="7"/><path d="M56 128 v20 M48 162 L56 148 L64 162 M46 136 h20"/>
+</g>
+<g class="fg-ext"><rect x="372" y="116" width="18" height="30" rx="4"/><path d="M378 116 v-7 h8 v7"/></g>
+<g class="fg-dashed"><path d="M72 131 L362 131" marker-end="url(#ar7)"/></g>
+<g class="fg-route"><path d="M56 168 v-98 h184 v108 h120 v-46 h10" marker-end="url(#ar8)"/></g>
+<g class="fg-label">
+<text x="24" y="26" class="sm">壁を突き抜ける直線ではなく、実際に歩く経路で測る</text>
+</g>
+<g class="fg-dashed"><path d="M28 212 h30"/></g>
+<g class="fg-route"><path d="M224 212 h30"/></g>
+<g class="fg-label">
+<text x="64" y="217" class="shu">水平距離（使わない）</text>
+<text x="260" y="217" class="ok">歩行距離（こちらで測る）</text>
+<text x="24" y="243" class="sm">小型消火器は歩行距離20m以下、大型消火器は30m以下。</text>
+<text x="24" y="259" class="sm">屋内消火栓設備の「水平距離25m」とは測り方が違う。</text>
+</g>
 </svg>`
 };
 
@@ -856,6 +973,7 @@ otsu6: [
         ['歩行距離（大型消火器）','各部分から一の消火器まで30m以下'],
         ['設置高さ','床面から1.5m以下'],
         ['標識','「消火器」と表示。地色は赤、文字は白、長辺24cm以上×短辺8cm以上']]},
+  {svg:'hokou', cap:'歩行距離と水平距離の違い'},
   {h:'よくある取り違え'},
   {p:'第一に、水平距離ではなく歩行距離です。壁を突き抜けた直線距離ではなく、実際に歩く経路の長さで測ります。屋内消火栓が水平距離25mなのと対照的で、ここを入れ替えた選択肢が定番です。'},
   {p:'第二に、大型のほうが距離が長い（30m）ことです。大型は数を減らせるぶん、遠くまでカバーしてよいと考えれば取り違えません。'},
@@ -1048,8 +1166,17 @@ otsu6: [
         ['放射方式','転倒式、破がい転倒式、開がい転倒式の3種類'],
         ['泡の膨張率','7倍以上（大型消火器以外、20℃・標準発泡ノズル）'],
         ['特有の構造','本体容器内面に液面表示、ノズル開口部にろ過網']]},
+  {h:'3つの放射方式'},
+  {tbl:[['方式','操作','安全栓にあたるもの'],
+        ['転倒式','ひっくり返すだけで内筒のふたが落下する','なし（動作により作動するため不要）'],
+        ['破がい転倒式','キャップの押し金具を押し、内筒を密封している鉛封板を破ってから転倒する','押し金具にかぶせる安全キャップ'],
+        ['開がい転倒式','キャップのハンドルを回して内筒ふたを開いてから転倒する。大型消火器に多い','回転止めハンドル']]},
+  {p:'実技試験の記述式では、「破蓋」「開蓋」をそれぞれ「破がい」「開がい」と書いて構いません。'},
+  {p:'なお、誤ってB剤（硫酸アルミニウム）を外筒に入れると、鋼製の本体容器が腐食します。酸性の薬剤だからです。A剤とB剤を入れる場所を取り違えないこと、という注意はここから来ています。'},
   {p:'液面表示とろ過網は化学泡だけの特徴です。液面表示は外筒・内筒それぞれに規定量の薬剤水溶液を入れる必要があるため、ろ過網は薬剤のかたまりがノズルを詰まらせるのを防ぐためにあります。'},
   {h:'機械泡消火器'},
+  {svg:'happou', cap:'発泡ノズルの仕組み'},
+  {p:'消火剤は水成膜や界面活性剤の水溶液です。発泡ノズルの根元に空気吸入孔があり、消火剤がノズルを通るときに空気を吸い込んで泡を作ります。'},
   {tbl:[['項目','内容'],
         ['発泡原理','泡が立ちやすい水溶液を放射する際、ノズルで空気を混入して発泡'],
         ['ノズル','専用の発泡ノズル。外部の空気を取り入れる空気吸入口がある'],
@@ -1069,6 +1196,10 @@ otsu6: [
 {id:'L613', t:'消火器別の構造② 二酸化炭素・粉末',
  b:[
   {h:'二酸化炭素消火器'},
+  {svg:'co2', cap:'二酸化炭素消火器の断面'},
+  {p:'外見上の特徴は2つ。本体が緑色であることと、ノズルに相当する大きなホーンが付いていることです。鑑別ではこの2点で一発で判別できます。'},
+  {p:'ホーンに握りが付いているのは、二酸化炭素が気化するときに周囲から熱を奪い、ホーンが著しく低温になるためです。凍傷を防ぐために、必ずホーン握りを持って操作します。'},
+  {p:'開閉バルブは高圧ガス保安法の適用を受けるため「容器弁」と呼ばれ、異常昇圧時にガスを放出する安全弁が設けられています。'},
   {tbl:[['項目','内容'],
         ['適応火災','B火災・C火災（A火災には適応しない）'],
         ['消火作用','窒息作用'],
